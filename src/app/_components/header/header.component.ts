@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { MenuController } from "src/app/_services/menu-controller";
 
 @Component({
     selector: 'app-header',
@@ -8,7 +9,9 @@ import { Component } from "@angular/core";
 export class AppHeader {
     isCollapsed: boolean = true;
     
-    constructor() {
+    constructor(
+        public menuController: MenuController
+    ) {
 
     }
 }

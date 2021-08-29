@@ -6,9 +6,13 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppHeader } from "./header/header.component";
+import { AppSideMenu } from "./side-menu/side-menu.component";
+import { VideoPlayer } from "./video-player/video-player.component";
 
 const Components = [
-    AppHeader
+    AppHeader,
+    AppSideMenu,
+    VideoPlayer
 ];
 
 @NgModule({

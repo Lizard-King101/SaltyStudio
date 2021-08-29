@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomComponents } from './_components/components.module';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { MenuController } from './_services/menu-controller';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
     CustomComponents,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    MenuController
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

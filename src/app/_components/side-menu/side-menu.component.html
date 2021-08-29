@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let item of menuController.menuItems">
+        <a [routerLink]="item.url">{{ item.label }}</a>
+    </li>
+</ul>

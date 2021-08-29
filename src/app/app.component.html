@@ -1,2 +1,5 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-side-menu></app-side-menu>
+<div class="app-body" [ngClass]="{'open': menuController.menuIsOpen}">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+</div>

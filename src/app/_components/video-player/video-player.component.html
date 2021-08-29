@@ -1,0 +1,28 @@
+<div class="big-play-pause" *ngIf="!playing" (click)="onPlay($event)">
+    <fa-icon style="color:white" [icon]="['fas', 'play']"></fa-icon>
+</div>
+<div class="controls" (click)="$event.stopPropagation()">
+    <div class="play" (click)="playing ? onPause($event) : onPlay($event)">
+        <fa-icon style="color:white" [icon]="['fas', playing ? 'pause' : 'play']"></fa-icon>
+    </div>
+    <div class="volume">
+        <fa-icon style="color:white" [icon]="['fas', volumeIcon]"></fa-icon>
+    </div>
+    <div class="scrub-bar-area">
+        <div #scrubbar class="scrub-bar">
+            <span class="progress-bar" [ngStyle]="{'width': progressPercent + '%'}">
+
+            </span>
+            <span class="buffer-bar"></span>
+        </div>
+    </div>
+    <div class="duration">
+
+    </div>
+    <div class="extra-controls">
+        <div class="full-screen">
+            <fa-icon style="color:white" [icon]="['fas', fullscreen ? 'compress' : 'expand']"></fa-icon>
+        </div>
+    </div>
+</div>
+<video #video [src]="source"></video>
